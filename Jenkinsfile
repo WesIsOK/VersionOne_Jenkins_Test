@@ -1,8 +1,3 @@
-#!groovy
-
-import groovy.json.JsonOutput
-import groovy.io.FileType
-
 pipeline
 {
 	agent any
