@@ -8,7 +8,7 @@ node {
  checkout scm
 
  stage('Start - Build env') {
-    sh '$PWD/script.sh'
+    sh 'sudo ./script.sh'
  }
 
 }
