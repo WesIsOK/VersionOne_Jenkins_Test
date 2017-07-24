@@ -8,7 +8,7 @@ node {
  checkout scm
 
  stage('Start - Build env') {
-    sh 'script.sh'
+    sh '$PWD/script.sh'
  }
 
 }
