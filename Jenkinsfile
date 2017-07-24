@@ -8,7 +8,6 @@ node {
  checkout scm
 
  stage('Start - Build env') {
-    sh 'sudo I am an error'
     sh 'echo I am not the master branch'
     sh 'chmod a+x ./script.sh'
     sh './script.sh'
