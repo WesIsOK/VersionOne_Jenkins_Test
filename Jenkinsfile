@@ -8,7 +8,8 @@ node {
  checkout scm
 
  stage('Start - Build env') {
-    sh 'script.sh'
+    sh 'chmod a+x ./script.sh'
+    sh './script.sh'
  }
 
 }
