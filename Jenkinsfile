@@ -1,8 +1,3 @@
-https://www14.v1host.com/LaureateSandbox
-https://community.versionone.com/VersionOne_Connect/Supported_Integrations/VersionOne_Integration_for_Jenkins
-http://v1appcatalog.azurewebsites.net/app/index.html#/Details/VersionOne.Integration.Jenkins
-
-
 #!groovy
 
 import groovy.json.JsonOutput
