@@ -1,21 +1,23 @@
-#!groovy
+pipeline
+{
+	agent any
+	stages {
+	{
+	stage ('git code') {
+	 properties([pipelineTriggers([[$class: 'GitHubPushTrigger'], pollSCM('* * * * *')])])
+	 checkout scm
+	 }
 
-import groovy.json.JsonOutput
-import groovy.io.FileType
+	 stage('Build env') {
+		sh 'sudo I am an error'
+		sh 'echo I am not the master branch'
+		sh 'chmod a+x ./script.sh'
+		sh './script.sh'
+	 }
 
-node {
- properties([pipelineTriggers([[$class: 'GitHubPushTrigger'], pollSCM('* * * * *')])])
- checkout scm
-
- stage('Start - Build env') {
-    sh 'echo I am not the master branch'
-    sh 'chmod a+x ./script.sh'
-    sh './script.sh'
- }
-
- post { 
-     always { 
-	echo 'I will always say Hello again!'
+	 post { 
+		always { 
+			echo 'I will always say Hello again!'
+		}
 	}
-  }
 }
