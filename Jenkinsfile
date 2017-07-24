@@ -5,7 +5,6 @@ pipeline
 	stage ('git code') 
 	{
 		steps {
-		properties([pipelineTriggers([[$class: 'GitHubPushTrigger'], pollSCM('* * * * *')])])
 		checkout scm
 		}
 	}
