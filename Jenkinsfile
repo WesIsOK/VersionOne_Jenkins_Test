@@ -2,7 +2,6 @@ pipeline
 {
 	agent any
 	stages {
-	{
 	stage ('git code') 
 	{
 		steps {
