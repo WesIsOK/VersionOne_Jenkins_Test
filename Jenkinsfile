@@ -12,9 +12,7 @@ pipeline
 	 stage('Build env') 
 	 {
 	 steps {
-		sh 'echo I am not the master branch'
-		sh 'chmod a+x ./script.sh'
-		sh './script.sh'
+		echo 'I am in the build stage'
 		}
 	 }
 	}
